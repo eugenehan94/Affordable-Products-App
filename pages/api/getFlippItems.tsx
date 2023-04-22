@@ -6,65 +6,57 @@ const puppeteer = require("puppeteer");
 import { Browser } from "puppeteer";
 
 const getFlippItems = async (req: NextApiRequest, res: NextApiResponse) => {
-  const url = "https://books.toscrape.com/";
-
+  const url = "https://flipp.com/search/chicken";
+  // const url = "https://flipp.com/search/beef"
   const browser: Browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  await page.goto(url);
+  // NOTE: https://www.urlbox.io/puppeteer-wait-for-page-load
+  await page.goto(url, {
+    // NOTE: allows to website to complete loading
+    waitUntil: "networkidle2",
+  });
 
-  const bookData = await page.evaluate((url) => {
-    const convertPrice = (price: string) => {
-      return parseFloat(price.replace("£", ""));
-    };
+  const test = await page.evaluate(() =>
+    Array.from(document.querySelectorAll(".ecom-item-wrapper"), (e) => ({
+      tester: e.getAttribute("class"),
+      tester2: e.querySelector(".ecom-item-container")?.getAttribute("data-context"),
+      tester3: e.querySelector("flipp-price")?.getAttribute("value"),
+      tester4: e.querySelector("img")?.getAttribute("data-src"),
+      tester5: e.querySelector(".name-text")?.textContent,
+      tester6: e.querySelector(".merchant-logo")?.getAttribute("data-src")
+    }))
+  );
+  console.log("test: ", test);
+  // const title = await page.evaluate(() => document.title)
+  // console.log(title)
 
-    const convertRating = (rating: string) => {
-      switch (rating) {
-        case "One":
-          return 1;
-        case "Two":
-          return 2;
-        case "Three":
-          return 3;
-        case "Four":
-          return 4;
-        case "Five":
-          return 5;
-        default:
-          return 0;
-      }
-    };
+  // const text = await page.evaluate(() => document.body.innerText)
+  // console.log(text)
 
-    const bookPods = Array.from(document.querySelectorAll(".product_pod"));
-    const data = bookPods.map((book: any) => ({
-      title: book.querySelector("h3 a").getAttribute("title"),
-      price: convertPrice(book.querySelector(".price_color").innerText),
-      imgSrc: url + book.querySelector("img").getAttribute("src"),
-      rating: convertRating(book.querySelector(".star-rating").classList[1]),
-    }));
-    return data;
-  }, url);
+  // NOTE: need this line to wait for fetching to complete
+  // await page.waitForSelector(".item-container");
 
-  console.log("bookData: ", bookData);
+  // const links = await page.evaluate(() =>
+  //   Array.from(document.querySelectorAll("a"), (e) => e.href)
+  // );
+  // console.log(links);
+
+  // const test = await page.evaluate(() =>
+  //   Array.from(document.querySelectorAll(".item-container"), (e) => ({
+  //     itemID: e.getAttribute("item-id"),
+  //     storeLogo: e.querySelector("img")?.getAttribute("data-src"),
+  //     image: e.querySelector(".wrapper a div img")?.getAttribute("src"),
+  //     merchant: e.querySelector("img")?.getAttribute("alt")
+  //   }))
+  // );
+  // console.log("TEST: ", test);
 
   await browser.close();
-  // Receive the input from the req body
-  // const body = JSON.parse(req.body);
-  // const {input} = body
-  // console.log("input: ", input)
 
   // const response = await fetch("https://www.npmjs.com/package/puppeteer");
   //   const res = await fetch("https://flipp.com/search/chicken");
   //   const res = await fetch("https://www.loblaws.ca/search?search-bar=chicken");
   // const html = await response.text();
-
-  // const dom = new JSDOM(html);
-  // const document = dom.window.document;
-  // console.log("document: ", document);
-  // const downloads = document.querySelector("._9ba9a726")?.textContent;
-  // console.log("downloads: ", downloads);
-
-  // Send downloads back to client
-  // res.status(200).json({ downloads });
 };
 
 export default getFlippItems;
