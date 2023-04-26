@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WeeklyAds from "@/components/WeeklyAds";
 
 export default function Home() {
   // const [downloads, setDownloads] = useState<string>("");
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <WeeklyAds/>
       {/* <Navbar></Navbar> */}
       {/* <input
         type="text"
