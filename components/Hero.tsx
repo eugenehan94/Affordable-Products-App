@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Hero = () => {
   return (
     <div className="px-4">
@@ -33,7 +31,7 @@ const Hero = () => {
           fill
           style={{ objectFit: "cover" }}
         /> */}
-        <img src="/HeroImage.png"/>
+        <img src="/HeroImage.png" alt="Flipp Hero"/>
       </div>
     </div>
   );
