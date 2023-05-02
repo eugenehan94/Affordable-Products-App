@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const WeeklyAds = () => {
   return (
-    <div className="px-4 mt-5 flex flex-col md:flex-row">
+    <div className="px-4 my-5 flex flex-col md:flex-row">
       <div>
         <p className="text-center md:text-left text-3xl md:w-9/12 md:mx-auto">
           Save at over 2000 of your{" "}

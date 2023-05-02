@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WeeklyAds from "@/components/WeeklyAds";
 import Coupons from "@/components/Coupons";
+import ShoppingList from "@/components/ShoppingList";
 
 export default function Home() {
   // const [downloads, setDownloads] = useState<string>("");
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <WeeklyAds />
       <Coupons />
+      <ShoppingList />
       {/* <Navbar></Navbar> */}
       {/* <input
         type="text"

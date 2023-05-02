@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="px-4">
+    <div className="px-4 my-5">
       <div className="flex flex-col md:flex-row mt-12 justify-center md:gap-10">
         <div className="text-2xl max-w-md text-center md:text-left">
           <span className="text-4xl">
