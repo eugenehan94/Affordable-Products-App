@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Coupons = () => {
   return (
-    <div className="px-4">
+    <div className="px-4 mt-14">
       <div className="flex md:gap-4">
         <div className="hidden md:inline-block">
           <img src="/CouponsPicture.jpg" alt="Coupons" />

@@ -4,6 +4,9 @@ import Hero from "@/components/Hero";
 import WeeklyAds from "@/components/WeeklyAds";
 import Coupons from "@/components/Coupons";
 import ShoppingList from "@/components/ShoppingList";
+import Search from "@/components/Search";
+import DownloadApp from "@/components/DownloadApp";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   // const [downloads, setDownloads] = useState<string>("");
@@ -24,6 +27,9 @@ export default function Home() {
       <WeeklyAds />
       <Coupons />
       <ShoppingList />
+      <Search />
+      <DownloadApp />
+      <Footer />
       {/* <Navbar></Navbar> */}
       {/* <input
         type="text"

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ShoppingList = () => {
   return (
-    <div className="px-4 my-5 md:flex">
+    <div className="px-4 mt-14 md:flex">
       <div>
         <p className="text-center md:text-left text-3xl pb-5 md:w-9/12 md:mx-auto">
           Stay organized with your{" "}
