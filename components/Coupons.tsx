@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const Coupons = () => {
   return (
-    <div className="px-4 mt-14">
+    <div className="px-4 mt-14" id="coupons">
       <div className="flex md:gap-4">
         <div className="hidden md:inline-block">
           <img src="/CouponsPicture.jpg" alt="Coupons" />
         </div>
         <div>
-          <p className="max-w-full mt-7 mb-5 text-center md:text-left text-3xl md:w-9/12">
+          <p className="max-w-full mt-7 mb-5 text-center md:text-left text-3xl md:w-9/12 text-gray-700">
             Add coupons directly to your{" "}
             <span className="font-bold">loyalty cards.</span>
           </p>
-          <p className="w-9/12 text-center md:text-left mx-auto md:mx-0 mb-3.5">
+          <p className="w-9/12 text-center md:text-left mx-auto md:mx-0 mb-3.5 text-gray-700">
             With Flipp, there’s no need to carry around all your loyalty cards.
             Simply add your cards to the Flipp app and clip your coupons
             digitally to save in-store.
           </p>
-          <p className="w-9/12 text-center md:text-left mx-auto md:mx-0">
+          <p className="w-9/12 text-center md:text-left mx-auto md:mx-0 text-gray-700">
             Download the Flipp App to find and clip coupons on-the-go
           </p>
           <div className=" mt-5 grid grid-cols-3 grid-rows-2 justify-items-center md:justify-items-start items-center">

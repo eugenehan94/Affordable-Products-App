@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const WeeklyAds = () => {
   return (
-    <div className="px-4 mt-14 flex flex-col md:flex-row">
+    <div className="px-4 mt-14 flex flex-col md:flex-row" id="weekly_ads">
       <div>
-        <p className="text-center md:text-left text-3xl md:w-9/12 md:mx-auto">
+        <p className="text-center md:text-left text-3xl md:w-9/12 md:mx-auto text-gray-700">
           Save at over 2000 of your{" "}
           <span className="font-bold">favourite stores.</span>
         </p>
-        <p className="text-center md:text-left w-9/12 mx-auto my-5">
+        <p className="text-center md:text-left w-9/12 mx-auto my-5 text-gray-700">
           Flipp is your one-stop marketplace for savings and deals. Browse
           weekly digital flyers from retailers near you, or search for the items
           you need.
         </p>
-        <p className="text-center md:text-left mx-auto w-9/12">
+        <p className="text-center md:text-left mx-auto w-9/12 text-gray-700">
           For the best mobile experience and to browse products on-the-go,
           download the <span>Flipp app</span> today. Available on the App Store,
           Google Play, and Huawei AppGallery.

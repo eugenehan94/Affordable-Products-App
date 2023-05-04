@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const ShoppingList = () => {
   return (
-    <div className="px-4 mt-14 md:flex">
+    <div className="px-4 mt-14 md:flex" id="shopping_list">
       <div>
-        <p className="text-center md:text-left text-3xl pb-5 md:w-9/12 md:mx-auto">
+        <p className="text-center md:text-left text-3xl pb-5 md:w-9/12 md:mx-auto text-gray-700">
           Stay organized with your{" "}
           <span className="font-bold">digital Shopping List.</span>
         </p>
-        <p className="w-9/12 mx-auto text-center md:text-left mb-5">
+        <p className="w-9/12 mx-auto text-center md:text-left mb-5 text-gray-700">
           Clip deals directly to your shopping list or add your own items. Flipp
           will instantly find deals for the items on your list. Download the{" "}
           <span className="underline">Flipp App</span> to have your list on hand

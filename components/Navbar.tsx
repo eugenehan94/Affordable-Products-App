@@ -9,16 +9,24 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between pt-4 pr-4 pl-4">
         <div className="flex justify-center items-center gap-x-4">
           <Image src="/flippLogo.svg" alt="Flipp" width="60" height="60" />
-          <h1>Flyers</h1>
-          <h1>Coupons</h1>
-          <h1>Shopping List</h1>
-          <h1>Search</h1>
+          <a href="#weekly_ads" className="text-gray-700">
+            Flyers
+          </a>
+          <a href="#coupons" className="text-gray-700">
+            Coupons
+          </a>
+          <a href="#shopping_list" className="text-gray-700">
+            Shopping List
+          </a>
+          <a href="#search" className="text-gray-700">
+            Search
+          </a>
         </div>
 
         <div className="flex justify-center items-center gap-x-4">
-          <h1>About Flipp</h1>
-          <h1>Flipp Mobile App</h1>
-          <h1>Blog</h1>
+          <h1 className="text-gray-700">About Flipp</h1>
+          <h1 className="text-gray-700">Flipp Mobile App</h1>
+          <h1 className="text-gray-700">Blog</h1>
         </div>
       </div>
       {/* Mobile View */}
@@ -48,9 +56,9 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
+              strokeWidth="3"
+              stroke="#9fa0a1"
+              className="w-7 h-7"
             >
               <path
                 strokeLinecap="round"
@@ -59,6 +67,10 @@ const Navbar = () => {
               />
             </svg>
           )}
+        </div>
+        {/* Mobile Menu */}
+        <div>
+
         </div>
       </div>
     </div>

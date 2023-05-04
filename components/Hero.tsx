@@ -3,12 +3,12 @@ const Hero = () => {
     <div className="px-4 my-5">
       <div className="flex flex-col md:flex-row mt-12 justify-center md:gap-10">
         <div className="text-2xl max-w-md text-center md:text-left">
-          <span className="text-4xl">
+          <span className="text-4xl text-gray-700">
             Save time and money weekly with digital ads on Flipp.
           </span>
         </div>
         <div>
-          <p className="text-center text-large mt-3.5">
+          <p className="text-center text-large mt-3.5 text-gray-700">
             <span className="font-bold">Type your postal code</span> below to
             see the latest deals near you.
           </p>
