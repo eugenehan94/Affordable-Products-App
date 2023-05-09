@@ -21,17 +21,12 @@ const Search = () => {
             placeholder="Try searching for 'eggs'"
             className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
           ></input>
-          {/* <Link
-            href="/search"
-            className="w-full h-10 mt-3 bg-blue-500 hover:bg-sky-400 rounded text-sm text-white flex justify-center items-center "
-          > */}
           <button
             onClick={() => handleClick()}
             className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1"
           >
             Search Flipp
           </button>
-          {/* </Link> */}
         </div>
       </div>
     </div>
