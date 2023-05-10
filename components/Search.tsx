@@ -1,11 +1,18 @@
-import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 const Search = () => {
   const router = useRouter();
+  const [input, setInput] = useState("");
   const handleClick = () => {
     console.log("Clicked");
-    router.push("/search/");
+    if (input) {
+      router.push(`/search/${input}`);
+    }
+    return;
+  };
+  const handleInput = (e: any) => {
+    setInput(e.target.value);
   };
 
   return (
@@ -18,6 +25,8 @@ const Search = () => {
         <div className="flex flex-col">
           <input
             type="text"
+            value={input}
+            onChange={handleInput}
             placeholder="Try searching for 'eggs'"
             className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
           ></input>

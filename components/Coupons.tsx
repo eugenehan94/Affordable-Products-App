@@ -24,38 +24,44 @@ const Coupons = () => {
             <Image
               src="/CVSPharmacyWithLogo.png"
               alt="Walmart Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/FamilyDollarLogo.png"
               alt="Kroger Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/MeijerLogo.png"
               alt="Kroger Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/PublixLogo.png"
               alt="Kroger Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }} 
             />
             <Image
               src="/RiteAidLogo.png"
               alt="Kroger Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
             <Image
               src="/WalgreensLogo.png"
               alt="Kroger Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
           <div className="flex justify-center">

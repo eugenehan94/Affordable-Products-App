@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="py-8">
       <div className="md:flex">
         <div className="flex justify-around content-start flex-1">
-          <Image src="/flippLogo.svg" alt="Flipp" width="60" height="60" />
+          <Image src="/flippLogo.svg" alt="Flipp" width={60} height={60} style={{ width: 'auto', height: 'auto' }}/>
           <ul className="text-sm text-gray-500">
             <li className="mb-3">Retail Platform</li>
             <li className="mb-3">Media Platform</li>

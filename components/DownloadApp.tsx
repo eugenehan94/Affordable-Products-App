@@ -18,16 +18,18 @@ const DownloadApp = () => {
               <Image
                 src="/AppStorePicture.png"
                 alt="Kroger Logo"
-                width="150"
-                height="150"
+                width={150}
+                height={150}
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <div>
               <Image
                 src="/GooglePlayPicture.png"
                 alt="Kroger Logo"
-                width="150"
-                height="150"
+                width={150}
+                height={150}
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
           </div>
@@ -50,9 +52,7 @@ const DownloadApp = () => {
             stroke="#9fa0a1"
             className="w-10 h-10"
           >
-            <path
-              d="M4.5 15.75l7.5-7.5 7.5 7.5"
-            />
+            <path d="M4.5 15.75l7.5-7.5 7.5 7.5" />
           </svg>
         </a>
       </div>

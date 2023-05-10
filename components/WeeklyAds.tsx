@@ -18,56 +18,64 @@ const WeeklyAds = () => {
           download the <span>Flipp app</span> today. Available on the App Store,
           Google Play, and Huawei AppGallery.
         </p>
-        <div className="grid grid-cols-4 grid-rows-2 justify-items-center items-center mt-10 md:w-9/12 md:mx-auto md:gap-2">
+        <div className="grid grid-cols-4 grid-rows-2 justify-items-center items-center mt-10 md:w-9/12 md:mx-auto gap-3 md:gap-2">
           <div>
             <Image
               src="/WalmartLogo.png"
               alt="Walmart Logo"
-              width="100"
-              height="100"
+              width={100}
+              height={100}
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
           <Image
             src="/KrogerLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
           <Image
             src="/HomeDepotLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }} 
           />
           <Image
             src="/CvsLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }} 
           />
           <Image
             src="/ToysrusLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
           <Image
             src="/MeijerLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
           <Image
             src="/FamilyDollarLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
           <Image
             src="/DicksLogo.png"
             alt="Kroger Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
         <div className="flex justify-center">

@@ -25,12 +25,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full h-full mt-10">
-        {/* <Image
-          src="/HeroImage.png"
-          alt="Flipp Hero"
-          fill
-          style={{ objectFit: "cover" }}
-        /> */}
         <img src="/HeroImage.png" alt="Flipp Hero"/>
       </div>
     </div>
