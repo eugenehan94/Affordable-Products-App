@@ -5,7 +5,6 @@ const Search = () => {
   const router = useRouter();
   const [input, setInput] = useState("");
   const handleClick = () => {
-    console.log("Clicked");
     if (input) {
       router.push(`/search/${input}`);
     }

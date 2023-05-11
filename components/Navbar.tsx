@@ -2,6 +2,11 @@ import Image from "next/image";
 import { useState } from "react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
   return (
     <div>
       <div className="hidden md:flex justify-between pt-4 pr-4 pl-4">
@@ -47,17 +52,17 @@ const Navbar = () => {
           </div>
 
           <div
-            className="flex justify-center items-center gap-x-4"
-            onClick={() => console.log("MENU CLICKED")}
+            className="flex justify-center items-center gap-x-4 cursor-pointer"
+            onClick={() => handleClick()}
           >
             {open ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
+                strokeWidth="3"
+                stroke="#9fa0a1"
+                className="w-7 h-7"
               >
                 <path
                   strokeLinecap="round"
@@ -84,11 +89,13 @@ const Navbar = () => {
           </div>
         </div>
         {/* Mobile View Menu */}
-        <div className="absolute left-0 top-16 md:hidden  w-full flex flex-col justify-center items-center py-2.5 box-border bg-white shadow-lg border-t-2 border-gray-300">
-          <a className="text-gray-700 text-center h-14">About Flipp</a>
-          <a className="text-gray-700 text-center h-14">Flipp Mobile App</a>
-          <a className="text-gray-700 text-center h-14">Blog</a>
-        </div>
+        {open && (
+          <div className="absolute left-0 top-16 md:hidden  w-full flex flex-col justify-center items-center py-2.5 box-border bg-white shadow-lg border-t-2 border-gray-200">
+            <a className="text-gray-700 text-center h-14">About Flipp</a>
+            <a className="text-gray-700 text-center h-14">Flipp Mobile App</a>
+            <a className="text-gray-700 text-center h-14">Blog</a>
+          </div>
+        )}
       </div>
     </div>
   );
