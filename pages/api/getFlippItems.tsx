@@ -17,15 +17,12 @@ const getFlippItems = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const test = await page.evaluate(() =>
     Array.from(document.querySelectorAll(".ecom-item-wrapper"), (e) => ({
-      // tester: e.getAttribute("class"),
-      // tester2: e
-      //   .querySelector(".ecom-item-container")
-      //   ?.getAttribute("data-context"),
       price: e.querySelector("flipp-price")?.getAttribute("value"),
       image: e.querySelector("img")?.getAttribute("data-src"),
       name: e.querySelector(".name-text")?.textContent,
+      nameSecond: e.querySelectorAll(".name-text")[1]?.textContent,
       storeLogo: e.querySelector(".merchant-logo")?.getAttribute("data-src"),
-      discount: e.querySelector(".discount")
+      discount: e.querySelector(".discount flipp-price")?.getAttribute("value")
     }))
   );
 
