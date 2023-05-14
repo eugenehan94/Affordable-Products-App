@@ -7,7 +7,7 @@ import SearchSidebar from "@/components/SearchSidebar";
 const ProductInput = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -22,13 +22,18 @@ const ProductInput = () => {
 
   if (isLoading || !data) return <p>Loading...</p>;
   const router = useRouter();
-  console.log("sidebarOpen: ", sidebarOpen)
+  console.log("sidebarOpen: ", sidebarOpen);
   return (
     <div>
-      {sidebarOpen && <SearchSidebar/>}
-      <SearchNavbar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen}/>
+      {sidebarOpen && (
+        <SearchSidebar
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
+      )}
+      <SearchNavbar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
       <div className="mt-20"></div>
-      <SearchResults data={data}/>
+      <SearchResults data={data} />
     </div>
   );
 };
