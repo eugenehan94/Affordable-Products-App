@@ -1,10 +1,17 @@
+import { useState } from "react";
 import Image from "next/image";
 
-const SearchNavbar = () => {
+const SearchNavbar = ({setSidebarOpen, sidebarOpen}: any) => {
+  const handleClick = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   return (
-    <div className="relative z-50">
+    <div className="relative z-40">
       <div className="fixed top-0 left-0 right-0 flex items-center justify-between bg-teal-400 h-20">
-        <div className="flex items-center">
+        <div
+          className="flex items-center hover:cursor-pointer"
+          onClick={() => handleClick()}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
