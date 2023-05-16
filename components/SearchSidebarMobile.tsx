@@ -6,8 +6,8 @@ const SearchSidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
     setSidebarOpen(!sidebarOpen);
   };
   return (
-    <div className="fixed top-0 left-0 bottom-0 right-0 w-screen z-50 flex">
-      <div className="w-2/4 h-screen bg-white flex flex-col">
+    <div className="fixed top-0 left-0 bottom-0 right-0 w-screen md:w-72 z-50 flex">
+      <div className="w-72 h-screen bg-white flex flex-col">
         <div className="flex justify-center items-center mb-5 mt-2">
           <Link href="/" onClick={() => handleClick()}>
             <Image
@@ -172,7 +172,8 @@ const SearchSidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
         </div>
       </div>
       <div
-        className="w-2/4 bg-black opacity-50"
+        // className="w-full bg-black opacity-50"
+        className="w-full bg-black opacity-50 md:hidden"
         onClick={() => {
           handleClick();
         }}

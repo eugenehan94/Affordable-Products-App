@@ -8,8 +8,8 @@ const SearchResults = ({ data }: any) => {
   // const query2 = query?.toUpperCase();
   return (
     <div className="my-20 px-2.5 md:px-8 ">
-      <h2 className="text-center md:text-left uppercase text-base font-bold my-3">{query} - ONLINE ITEMS</h2>
-      <div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-3">
+      <h2 className="uppercase text-base font-bold my-3">{query} - ONLINE ITEMS</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {data.map((product: any) => (
         <div className="relative p-3 border border-gray-200 rounded-lg shadow h-64 w-52 mb-1.5">
           <img
