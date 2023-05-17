@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
     <div className="px-4 my-5">
@@ -25,7 +27,15 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full h-full mt-10">
-        <img src="/HeroImage.png" alt="Flipp Hero"/>
+        {/* https://github.com/vercel/next.js/discussions/18474#discussioncomment-5501724 */}
+        <Image
+          src="/HeroImage.png"
+          alt="Flipp Hero"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </div>
     </div>
   );

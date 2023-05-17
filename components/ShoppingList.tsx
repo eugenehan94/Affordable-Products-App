@@ -16,28 +16,76 @@ const ShoppingList = () => {
         </p>
         <div className="grid grid-cols-4 grid-rows-2 justify-items-center items-center md:w-9/12 md:mx-auto">
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/MilkIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/MilkIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/EggIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/EggIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/ButterIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/ButterIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/CheeseIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/CheeseIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/BreadIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }} />
+            <Image
+              src="/BreadIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/AppleIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/AppleIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/BroccoliIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/BroccoliIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
           <div className=" flex justify-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12">
-            <Image src="/IceCreamIcon.svg" alt="Flipp" width={35} height={35} style={{ width: 'auto', height: 'auto' }}/>
+            <Image
+              src="/IceCreamIcon.svg"
+              alt="Flipp"
+              width={35}
+              height={35}
+              style={{ width: "auto", height: "auto" }}
+            />
           </div>
         </div>
         <div className="flex justify-center">
@@ -47,7 +95,15 @@ const ShoppingList = () => {
         </div>
       </div>
       <div>
-        <img src="/WeeklyAdsPicture.jpeg" alt="Weekly Ads" />
+        {/* https://github.com/vercel/next.js/discussions/18474#discussioncomment-5501724 */}
+        <Image
+          src="/WeeklyAdsPicture.jpeg"
+          alt="Weekly Ads"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </div>
     </div>
   );

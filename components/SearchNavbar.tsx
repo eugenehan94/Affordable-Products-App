@@ -6,7 +6,7 @@ const SearchNavbar = ({ setSidebarOpen, sidebarOpen }: any) => {
   };
   return (
     <div className="relative z-40">
-      <div className="fixed top-0 left-0 md:left-72 right-0 flex items-stretch bg-teal-400 h-20">
+      <div className="fixed top-0 left-0 md:left-48 right-0 flex items-stretch bg-teal-400 h-20">
         <div
           className="flex items-center w-auto hover:cursor-pointer pl-2.5 pr-3 md:hidden"
           onClick={() => handleClick()}
@@ -29,7 +29,7 @@ const SearchNavbar = ({ setSidebarOpen, sidebarOpen }: any) => {
             // style={{ width: "auto", height: "auto" }}
           />
         </div>
-        <div className="flex w-full md:justify-between">
+        <div className="flex w-full md:justify-between md:ml-2">
           <div className="flex items-center flex-1 max-w-md">
             <input
               type="text"

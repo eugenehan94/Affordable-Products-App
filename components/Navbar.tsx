@@ -56,6 +56,7 @@ const Navbar = () => {
             onClick={() => handleClick()}
           >
             {open ? (
+              // Close X button
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,6 +72,7 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
+              // Hamburger Menu
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

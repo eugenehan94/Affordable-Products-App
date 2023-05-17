@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const SearchSidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
+const SearchSidebarDesktop = ({ setSidebarOpen, sidebarOpen }: any) => {
   const handleClick = () => {
     setSidebarOpen(!sidebarOpen);
   };
   return (
-    <div className="fixed top-0 left-0 bottom-0 right-0 w-screen md:w-72 z-50 flex md:hidden">
+    <div className="fixed top-0 left-0 bottom-0 right-0 w-screen md:w-48 z-50 hidden md:flex ">
       <div className="w-72 h-screen bg-white flex flex-col">
         <div className="flex justify-center items-center mb-5 mt-2">
           <Link href="/" onClick={() => handleClick()}>
@@ -171,14 +171,8 @@ const SearchSidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
           </button>
         </div>
       </div>
-      <div
-        className="w-full bg-black opacity-50 md:hidden"
-        onClick={() => {
-          handleClick();
-        }}
-      ></div>
     </div>
   );
 };
 
-export default SearchSidebar;
+export default SearchSidebarDesktop;

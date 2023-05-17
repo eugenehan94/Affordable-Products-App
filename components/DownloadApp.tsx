@@ -17,27 +17,39 @@ const DownloadApp = () => {
             <div>
               <Image
                 src="/AppStorePicture.png"
-                alt="Kroger Logo"
+                alt="Apple Store"
                 width={150}
                 height={150}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: "auto", height: "auto" }}
+                className="cursor-pointer"
               />
             </div>
             <div>
               <Image
                 src="/GooglePlayPicture.png"
-                alt="Kroger Logo"
+                alt="Google Store"
                 width={150}
                 height={150}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: "auto", height: "auto" }}
+                className="cursor-pointer"
               />
             </div>
           </div>
         </div>
         <div className="w-full hidden md:inline-block ">
-          <img src="/DownloadPicture.png" className="-translate-y-24" />
+          {/* https://github.com/vercel/next.js/discussions/18474#discussioncomment-5501724 */}
+          <Image
+            src="/DownloadPicture.png"
+            alt="Download"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            className="-translate-y-24"
+          />
         </div>
       </div>
+      {/* NOTE: Code below is the back to top button (Up arrow) */}
       <div className=" relative w-full flex justify-end">
         <a
           href="#"
