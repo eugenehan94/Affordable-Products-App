@@ -22,19 +22,21 @@ const Search = () => {
           stores to quickly find what you need.
         </p>
         <div className="flex flex-col">
-          <input
-            type="text"
-            value={input}
-            onChange={handleInput}
-            placeholder="Try searching for 'eggs'"
-            className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
-          ></input>
-          <button
-            onClick={() => handleClick()}
-            className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1"
-          >
-            Search Flipp
-          </button>
+          {/* <form action="/api/getFlippItems" method="post"> */}
+            <input
+              type="text"
+              value={input}
+              onChange={handleInput}
+              placeholder="Try searching for 'eggs'"
+              className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
+            ></input>
+            <button
+              onClick={() => handleClick()}
+              className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1"
+            >
+              Search Flipp
+            </button>
+          {/* </form> */}
         </div>
       </div>
     </div>

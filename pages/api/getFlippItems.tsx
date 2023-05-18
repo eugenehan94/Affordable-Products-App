@@ -4,14 +4,13 @@ import { NextApiRequest, NextApiResponse } from "next/types";
 
 const puppeteer = require("puppeteer");
 import { Browser } from "puppeteer";
-
 const getFlippItems = async (req: NextApiRequest, res: NextApiResponse) => {
-  const url = "https://flipp.com/search/chicken";
+  const url = `https://flipp.com/search/${req.body}`;
   const browser: Browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   // NOTE: https://www.urlbox.io/puppeteer-wait-for-page-load
   await page.goto(url, {
-    // NOTE: allows to website to complete loading
+    // NOTE: allows target website to complete loading
     waitUntil: "networkidle2",
   });
 
