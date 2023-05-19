@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const SearchSidebarDesktop = ({ setSidebarOpen, sidebarOpen }: any) => {
+const SearchSidebarDesktop = ({ setSidebarOpen, sidebarOpen }: {setSidebarOpen: Function, sidebarOpen: boolean}) => {
   const handleClick = () => {
     setSidebarOpen(!sidebarOpen);
   };

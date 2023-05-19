@@ -5,11 +5,16 @@ import SearchNavbar from "@/components/SearchNavbar";
 import SearchResults from "@/components/SearchResults";
 import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
 import SearchSidebarMobile from "@/components/SearchSidebarMobile";
+import DownloadAppButton from "@/components/DownloadAppButton";
 
 const ProductInput = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  // NOTE: This useState is for the input in SearchNavbar
+  const [userQuery, setUserQuery] = useState(null);
+  // "isResultsLoading" is for the loading state of the SearchResults component only
+  const [isResultsLoading, setIsResultsLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -18,7 +23,6 @@ const ProductInput = () => {
     // "isReady" - when refreshed the router is initially empty, this will prevent the
     // initial value from being read. As per docs, only use in useEffect. Thus, didn't use
     // getServerSideProps
-    console.log("router.isReady: ", router.isReady);
     if (router.isReady) {
       fetch("/api/getFlippItems", {
         method: "POST",
@@ -43,10 +47,19 @@ const ProductInput = () => {
           setSidebarOpen={setSidebarOpen}
         />
       )}
-      <SearchSidebarDesktop />
-      <SearchNavbar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
+      <SearchSidebarDesktop
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
+      <SearchNavbar
+        setSidebarOpen={setSidebarOpen}
+        sidebarOpen={sidebarOpen}
+        userQuery={userQuery}
+        setUserQuery={setUserQuery}
+      />
       <div className="mt-20"></div>
       <SearchResults data={data} />
+      <DownloadAppButton />
     </div>
   );
 };
