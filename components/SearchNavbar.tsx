@@ -7,11 +7,15 @@ const SearchNavbar = ({
   sidebarOpen,
   userQuery,
   setUserQuery,
+  isResultsLoading,
+  setIsResultsLoading,
 }: {
   setSidebarOpen: Function;
   sidebarOpen: boolean;
   userQuery: any;
   setUserQuery: Function;
+  isResultsLoading: boolean;
+  setIsResultsLoading: Function;
 }) => {
   const router = useRouter();
   // const inputRef = useRef<any>(null);
@@ -19,7 +23,24 @@ const SearchNavbar = ({
     setSidebarOpen(!sidebarOpen);
   };
   const onSubmit = () => {
-    // console.log("inputRef: ", inputRef.current.value);
+    const userQueryLowerCase = userQuery.toString().toLowerCase().trim();
+    const routerProductInputLowerCase = router.query.productInput
+      ?.toString()
+      .toLowerCase()
+      .trim();
+    if (
+      userQueryLowerCase === routerProductInputLowerCase ||
+      userQuery === ""
+    ) {
+      return;
+    }
+    setIsResultsLoading(true);
+    // NOTE: Since not reloading full page - We need the url to change to user
+    // search input
+    router.push(`/search/${userQuery}`);
+  };
+  const handleInput = (e: any) => {
+    setUserQuery(e.target.value);
   };
   useEffect(() => {
     setUserQuery(router.query.productInput);
@@ -56,6 +77,7 @@ const SearchNavbar = ({
             <input
               type="text"
               value={userQuery}
+              onChange={handleInput}
               // ref={inputRef}
               placeholder="Search flyers or items"
               className="outline-none border border-solid border-slate-300 text-sm pr-1.5 pl-2.5 py-2 w-full"
@@ -68,7 +90,6 @@ const SearchNavbar = ({
               stroke="currentColor"
               className="w-7 h-7 mx-1.5 cursor-pointer text-gray-800"
               onClick={() => {
-                console.log("SVG Clicked");
                 onSubmit();
               }}
             >

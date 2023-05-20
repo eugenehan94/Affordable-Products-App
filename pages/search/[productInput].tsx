@@ -12,12 +12,13 @@ const ProductInput = () => {
   const [isLoading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // NOTE: This useState is for the input in SearchNavbar
-  const [userQuery, setUserQuery] = useState(null);
+  const [userQuery, setUserQuery] = useState("");
   // "isResultsLoading" is for the loading state of the SearchResults component only
   const [isResultsLoading, setIsResultsLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    console.log("FIRST USEEFFECT");
     setLoading(true);
     // https://nextjs.org/docs/pages/api-reference/functions/use-router#router-object
     // "isReady" - when refreshed the router is initially empty, this will prevent the
@@ -56,9 +57,17 @@ const ProductInput = () => {
         sidebarOpen={sidebarOpen}
         userQuery={userQuery}
         setUserQuery={setUserQuery}
+        isResultsLoading={isResultsLoading}
+        setIsResultsLoading={setIsResultsLoading}
       />
       <div className="mt-20"></div>
-      <SearchResults data={data} />
+      <SearchResults
+        data={data}
+        setData={setData}
+        isResultsLoading={isResultsLoading}
+        setIsResultsLoading={setIsResultsLoading}
+        userQuery={userQuery}
+      />
       <DownloadAppButton />
     </div>
   );
