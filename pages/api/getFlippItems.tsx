@@ -1,5 +1,3 @@
-// puppeteer?
-//https://www.youtube.com/watch?v=FKkDUW4E2Qc&ab_channel=Joshtriedcoding
 import { NextApiRequest, NextApiResponse } from "next/types";
 
 const puppeteer = require("puppeteer");

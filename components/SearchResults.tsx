@@ -15,7 +15,6 @@ const SearchResults = ({
   setData: Function;
   userQuery: string;
 }) => {
-  console.log("Search Results data: ", data);
   const router = useRouter();
   const query = router.query.productInput?.toString();
 
@@ -76,8 +75,11 @@ const SearchResults = ({
         {query} - ONLINE ITEMS
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {data.map((product: any) => (
-          <div className="relative p-3 border border-gray-200 rounded-lg shadow h-64 w-52 mb-1.5">
+        {data.map((product: any, i: number) => (
+          <div
+            className="relative p-3 border border-gray-200 rounded-lg shadow h-64 w-52 mb-1.5"
+            key={i}
+          >
             <img
               src={product.storeLogo}
               alt="store logo"

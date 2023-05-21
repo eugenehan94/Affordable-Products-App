@@ -18,7 +18,6 @@ const ProductInput = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log("FIRST USEEFFECT");
     setLoading(true);
     // https://nextjs.org/docs/pages/api-reference/functions/use-router#router-object
     // "isReady" - when refreshed the router is initially empty, this will prevent the
@@ -32,7 +31,6 @@ const ProductInput = () => {
         .then((res) => res.json())
         .then((data) => {
           setData(data);
-          console.log(data);
           setLoading(false);
         });
     }

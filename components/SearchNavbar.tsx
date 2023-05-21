@@ -46,7 +46,6 @@ const SearchNavbar = ({
     setUserQuery(router.query.productInput);
   }, [router.query.productInput]);
 
-  console.log("userQuery: ", userQuery);
   return (
     <div className="relative z-40">
       <div className="fixed top-0 left-0 md:left-48 right-0 flex items-stretch bg-teal-400 h-20">
