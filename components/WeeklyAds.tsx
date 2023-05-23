@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const WeeklyAds = () => {
   return (
     <div className="px-4 mt-14 flex flex-col md:flex-row" id="weekly_ads">
@@ -25,7 +25,7 @@ const WeeklyAds = () => {
               alt="Walmart Logo"
               width={100}
               height={100}
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
           <Image
@@ -33,55 +33,61 @@ const WeeklyAds = () => {
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/HomeDepotLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }} 
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/CvsLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }} 
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/ToysrusLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/MeijerLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/FamilyDollarLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/DicksLogo.png"
             alt="Kroger Logo"
             width={100}
             height={100}
-            style={{ width: 'auto', height: 'auto' }}
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         <div className="flex justify-center">
-          <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
+          {/* <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
             Browse Flyers
-          </button>
+          </button> */}
+          <Link
+            href="/flyers"
+            className="flex justify-center items-center cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm"
+          >
+            Browse Flyers
+          </Link>
         </div>
       </div>
       <div>

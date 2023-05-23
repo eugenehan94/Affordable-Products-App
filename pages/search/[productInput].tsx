@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Loader from "@/components/Loader";
 import SearchNavbar from "@/components/SearchNavbar";
 import SearchResults from "@/components/SearchResults";
@@ -7,14 +7,14 @@ import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
 import SearchSidebarMobile from "@/components/SearchSidebarMobile";
 import DownloadAppButton from "@/components/DownloadAppButton";
 
+import { UserContext } from "@/context/context";
+
 const ProductInput = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  // NOTE: This useState is for the input in SearchNavbar
-  const [userQuery, setUserQuery] = useState("");
-  // "isResultsLoading" is for the loading state of the SearchResults component only
-  const [isResultsLoading, setIsResultsLoading] = useState(false);
+  const {sidebarOpen, setSidebarOpen} = useContext(UserContext)
+  const {userQuery, setUserQuery} = useContext(UserContext)
+  const {isResultsLoading, setIsResultsLoading} = useContext(UserContext)
   const router = useRouter();
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -20,9 +21,15 @@ const Hero = () => {
               placeholder="M4J1A1"
               className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
             ></input>
-            <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1">
+            {/* <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1">
               Start Saving
-            </button>
+            </button> */}
+            <Link
+              href="/flyers"
+              className=" text-center cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1"
+            >
+              Start Saving
+            </Link>
           </div>
         </div>
       </div>

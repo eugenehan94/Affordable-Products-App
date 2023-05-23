@@ -1,24 +1,24 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const SearchNavbar = ({
   setSidebarOpen,
   sidebarOpen,
   userQuery,
   setUserQuery,
-  isResultsLoading,
   setIsResultsLoading,
+  isResultsLoading
 }: {
   setSidebarOpen: Function;
   sidebarOpen: boolean;
-  userQuery: any;
+  userQuery?: any;
   setUserQuery: Function;
-  isResultsLoading: boolean;
   setIsResultsLoading: Function;
+  isResultsLoading?: boolean
 }) => {
   const router = useRouter();
-  // const inputRef = useRef<any>(null);
+
   const handleClick = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -77,7 +77,6 @@ const SearchNavbar = ({
               type="text"
               value={userQuery}
               onChange={handleInput}
-              // ref={inputRef}
               placeholder="Search flyers or items"
               className="outline-none border border-solid border-slate-300 text-sm pr-1.5 pl-2.5 py-2 w-full"
             />
