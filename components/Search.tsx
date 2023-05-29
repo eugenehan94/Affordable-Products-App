@@ -10,7 +10,7 @@ const Search = () => {
     }
     return;
   };
-  const handleInput = (e: any) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
 

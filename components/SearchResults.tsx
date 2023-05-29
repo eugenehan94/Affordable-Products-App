@@ -2,6 +2,15 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
+interface dataType {
+  price: string;
+  image: string;
+  name: string;
+  nameSecond: string;
+  storeLogo: string;
+  discount: string;
+}
+
 const SearchResults = ({
   data,
   isResultsLoading,
@@ -9,7 +18,7 @@ const SearchResults = ({
   setData,
   userQuery,
 }: {
-  data: any;
+  data: dataType[];
   isResultsLoading: boolean;
   setIsResultsLoading: Function;
   setData: Function;
@@ -17,7 +26,6 @@ const SearchResults = ({
 }) => {
   const router = useRouter();
   const query = router.query.productInput?.toString();
-
   useEffect(() => {
     if (isResultsLoading === true) {
       fetch("/api/getFlippItems", {
@@ -75,7 +83,7 @@ const SearchResults = ({
         {query} - ONLINE ITEMS
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {data.map((product: any, i: number) => (
+        {data.map((product: dataType, i: number) => (
           <div
             className="relative p-3 border border-gray-200 rounded-lg shadow h-64 w-52 mb-1.5"
             key={i}

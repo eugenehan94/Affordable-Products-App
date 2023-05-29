@@ -12,18 +12,17 @@ const SearchNavbar = ({
 }: {
   setSidebarOpen: Function;
   sidebarOpen: boolean;
-  userQuery?: any;
+  userQuery?: string;
   setUserQuery: Function;
   setIsResultsLoading: Function;
   isResultsLoading?: boolean
 }) => {
   const router = useRouter();
-
   const handleClick = () => {
     setSidebarOpen(!sidebarOpen);
   };
   const onSubmit = () => {
-    const userQueryLowerCase = userQuery.toString().toLowerCase().trim();
+    const userQueryLowerCase = userQuery?.toString().toLowerCase().trim();
     const routerProductInputLowerCase = router.query.productInput
       ?.toString()
       .toLowerCase()
@@ -39,7 +38,7 @@ const SearchNavbar = ({
     // search input
     router.push(`/search/${userQuery}`);
   };
-  const handleInput = (e: any) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserQuery(e.target.value);
   };
   useEffect(() => {

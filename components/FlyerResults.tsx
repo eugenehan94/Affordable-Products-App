@@ -1,7 +1,14 @@
-const FlyerResults = ({ flyersData }: { flyersData: any }) => {
+interface FlyerData {
+  dealEnds: string;
+  image: string;
+  merchantLogo: string;
+  merchantName: string;
+}
+
+const FlyerResults = ({ flyersData }: { flyersData: FlyerData[] }) => {
   return (
     <div className="my-24 px-2.5 md:px-8 md:ml-44">
-      {flyersData.map((flyer: any, i: number) => (
+      {flyersData.map((flyer: FlyerData, i: number) => (
         <div className="relative p-2 mt-5 border border-slate-200" key={i}>
           <div className="absolute flex justify-center items-center top-1 right-2 w-14 h-14 bg-white rounded-full shadow-2xl hover:cursor-pointer">
             <svg
