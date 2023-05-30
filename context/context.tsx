@@ -5,7 +5,7 @@ export const UserContext = createContext<any>(null);
 const Context = ({ children }: { children: any }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // NOTE: This useState is for the input in SearchNavbar
-  const [userQuery, setUserQuery] = useState<string | undefined>(undefined);
+  const [userQuery, setUserQuery] = useState<string>("");
   // "isResultsLoading" is for the loading state of the SearchResults component only
   const [isResultsLoading, setIsResultsLoading] = useState(false);
   return (

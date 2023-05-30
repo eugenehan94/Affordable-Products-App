@@ -8,14 +8,14 @@ const SearchNavbar = ({
   userQuery,
   setUserQuery,
   setIsResultsLoading,
-  isResultsLoading
+  isResultsLoading,
 }: {
   setSidebarOpen: Function;
   sidebarOpen: boolean;
   userQuery?: string;
   setUserQuery: Function;
   setIsResultsLoading: Function;
-  isResultsLoading?: boolean
+  isResultsLoading?: boolean;
 }) => {
   const router = useRouter();
   const handleClick = () => {
@@ -42,7 +42,11 @@ const SearchNavbar = ({
     setUserQuery(e.target.value);
   };
   useEffect(() => {
-    setUserQuery(router.query.productInput);
+    //NOTE: Keep this "if" statement - prevents controlled/uncontrolled warning. Since some
+    // pages doesn't require the query.
+    if (router.query.productInput) {
+      setUserQuery(router.query.productInput);
+    }
   }, [router.query.productInput]);
 
   return (

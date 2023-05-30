@@ -15,9 +15,11 @@ const Flyers = () => {
   const {sidebarOpen, setSidebarOpen} = useContext(UserContext)
   const {userQuery, setUserQuery} = useContext(UserContext)
   const {isResultsLoading, setIsResultsLoading} = useContext(UserContext)
- 
+
   useEffect(() => {
     setIsFlyersLoading(true);
+    //NOTE: Setting to empty string because this page doesn't require any input initially
+    setUserQuery("")
     fetch("/api/getFlippFlyers")
       .then((res) => res.json())              
       .then((data) => {
@@ -30,7 +32,6 @@ const Flyers = () => {
 
   return (
     <div>
-      {/* @TODO: Warning in console is cause by this component - Investigate */}
       <SearchNavbar
         setSidebarOpen={setSidebarOpen}
         sidebarOpen={sidebarOpen}
