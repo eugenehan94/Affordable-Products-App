@@ -12,7 +12,7 @@ const getFlippItems = async (req: NextApiRequest, res: NextApiResponse) => {
     waitUntil: "networkidle2",
   });
 
-  const test = await page.evaluate(() =>
+  const data = await page.evaluate(() =>
     Array.from(document.querySelectorAll(".ecom-item-wrapper"), (e) => ({
       price: e.querySelector("flipp-price")?.getAttribute("value"),
       image: e.querySelector("img")?.getAttribute("data-src"),
@@ -23,7 +23,7 @@ const getFlippItems = async (req: NextApiRequest, res: NextApiResponse) => {
     }))
   );
 
-  res.status(200).json(test);
+  res.status(200).json(data);
   await browser.close();
 };
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Coupons = () => {
   return (
@@ -73,9 +74,15 @@ const Coupons = () => {
             />
           </div>
           <div className="flex justify-center">
-            <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
+            {/* <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
               Browse Coupons
-            </button>
+            </button> */}
+            <Link
+              href="/coupons"
+              className="flex items-center justify-center cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm"
+            >
+              Browse Coupons
+            </Link>
           </div>
         </div>
       </div>
