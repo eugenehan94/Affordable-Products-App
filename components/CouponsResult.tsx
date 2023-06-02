@@ -8,10 +8,10 @@ interface CouponsData {
 const CouponsResult = ({ couponsData }: { couponsData: CouponsData[] }) => {
   console.log("couponsData: ", couponsData);
   return (
-    <div className="mt-5">
+    <div className="flex flex-wrap gap-3 mt-5">
       {couponsData.map((coupon, index) => (
-        <div className="flex flex-col w-1/2" key={index}>
-          <div className="border-dashed border-2 border-slate-300">
+        <div className="basis-52 border border-1 border-slate-300 p-1 rounded" key={index}>
+          <div className="border-dashed border-2 border-slate-300 p-1 rounded">
             <div className="h-24">
               <img
                 src={coupon.image}
@@ -24,12 +24,12 @@ const CouponsResult = ({ couponsData }: { couponsData: CouponsData[] }) => {
             <p className="text-sm leading-3">{coupon.promoTextOne}</p>
             <p className="text-sm leading-3">{coupon.promoTextTwo}</p>
           </div>
-          {/* <div>
+          <div>
             <p className="text-sm font-normal">
               Matchup at{" "}
               <span className="text-sky-600 font-bold">{coupon.retailer}</span>
             </p>
-          </div> */}
+          </div>
         </div>
       ))}
     </div>
