@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ShoppingList = () => {
   return (
@@ -89,9 +90,15 @@ const ShoppingList = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
+          {/* <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm">
             Create a Shopping List
-          </button>
+          </button> */}
+          <Link
+            href="/shopping_list"
+            className="flex justify-center items-center cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded w-48 h-11 my-5 text-sm"
+          >
+            Create a Shopping List
+          </Link>
         </div>
       </div>
       <div>
