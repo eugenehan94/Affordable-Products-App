@@ -127,7 +127,7 @@ const ShoppingListResult = () => {
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/AppleIcon.svg"
-                      alt="Flipp"
+                      alt="Apple"
                       width={80}
                       height={80}
                       // style={{ width: "auto", height: "auto" }}
@@ -139,7 +139,7 @@ const ShoppingListResult = () => {
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/BreadIcon.svg"
-                      alt="Flipp"
+                      alt="Bread"
                       width={80}
                       height={80}
                       // style={{ width: "auto", height: "auto" }}
@@ -151,13 +151,25 @@ const ShoppingListResult = () => {
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/BroccoliIcon.svg"
-                      alt="Flipp"
+                      alt="Broccoli"
                       width={80}
                       height={80}
                       // style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <span>Broccoli</span>
+                </li>
+                <li className="flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/ButterIcon.svg"
+                      alt="Butter"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span>Butter</span>
                 </li>
               </ul>
             </div>
