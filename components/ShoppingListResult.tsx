@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import ShoppingListNotice from "./ShoppingListNotice";
+
 const ShoppingListResult = () => {
   return (
-    <div className="flex">
-      <div className="basis-1/2">
-        <div className="flex items-center gap-2">
+    <div className="flex gap-2">
+      <div className="basis-full md:basis-2/5">
+        <div className="hidden md:flex gap-1 px-1 my-7">
           <input
             type="text"
             placeholder="+Add an item"
@@ -43,14 +45,14 @@ const ShoppingListResult = () => {
                   d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
                 />
               </svg>
-              Clean Up List
+              <span className="hidden lg:inline-block">Clean Up List</span>
             </span>
           </button>
         </div>
         <h1 className="font-black text-xs uppercase text-slate-500">
           My Clippings
         </h1>
-        <div className="bg-sky-100 flex flex-col justify-center items-center p-5 m-5">
+        <div className="bg-sky-100 flex flex-col justify-center items-center p-5 m-5 md:m-1">
           <h3 className="font-bold text-sm">No Clippings Yet</h3>
           <p className="text-sm my-3.5">
             Items you have clipped in flyers and your shopping list will be
@@ -63,66 +65,27 @@ const ShoppingListResult = () => {
             Start Browsing Flyers
           </Link>
         </div>
-      </div>
-      <div className="basis-1/2">
-        <div className="p-2 bg-sky-100 border border-slate-300 flex gap-2">
-          <div className="grow-0">
-            <Image
-              src="/ClippingCoupons.png"
-              alt="clipping coupons"
-              width={100}
-              height={100}
-              style={{ width: "auto", height: "auto" }}
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <div>
-              <h2 className="text-lg leading-5 font-normal">
-                We've made saving even easier
-              </h2>
-              <p className="text-sm font-normal">
-                Sign in to your Flipp account to save and sync your loyalty
-                cards.
-                <span className="text-sky-400 cursor-pointer">
-                  {" "}
-                  Download
-                </span>{" "}
-                the Flipp App to get them on the go
-              </p>
-            </div>
-            <div className="flex gap-2 flex-col sm:flex-row">
-              <div className="border border-slate-200 hover:cursor-pointer">
-                <Image
-                  src="/SignInWithGoogle.png"
-                  alt="sign in with google"
-                  width={185}
-                  height={40}
-                  //   style={{ width: "auto", height: "auto" }}
-                />
-              </div>
-              <div className="border border-slate-200 hover:cursor-pointer">
-                <Image
-                  src="/SignInWithFacebook.png"
-                  alt="sign in with google"
-                  width={185}
-                  height={40}
-                  //   style={{ width: "auto", height: "auto" }}
-                />
-              </div>
-            </div>
-          </div>
+        <div className="hidden md:flex">
+          <p className="text-sm text-center">
+            Start building your shopping list either by{" "}
+            <span className="font-bold">typing an item</span> or{" "}
+            <span className="font-bold">clicking on one of these items</span>
+          </p>
         </div>
-        <div>
+      </div>
+      <div className="hidden md:inline-block basis-3/5">
+        <ShoppingListNotice/>
+        <div className="mt-5">
           <h3 className="text-center text-base font-black">
             Recommended Items
           </h3>
           <div>
-            <div className="flex justify-between">
-              <h4>Popular Items</h4>
-              <button>+ Add all</button>
+            <div className="flex justify-between mb-2">
+              <h4 className="uppercase text-sm text-slate-500 font-black">Popular Items</h4>
+              <button className="text-sm font-bold text-sky-500">+ Add all</button>
             </div>
             <div>
-              <ul className="flex">
+              <ul className="flex flex-wrap items-stretch justify-center">
                 <li className="flex flex-col items-center justify-center">
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
@@ -133,9 +96,33 @@ const ShoppingListResult = () => {
                       // style={{ width: "auto", height: "auto" }}
                     />
                   </button>
-                  <span>Apple</span>
+                  <span className="text-sm capitalize">Apple</span>
                 </li>
                 <li className="flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Bacon.png"
+                      alt="Bacon"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Bacon</span>
+                </li>
+                <li className="flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Bananas.png"
+                      alt="Bananas"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Bananas</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/BreadIcon.svg"
@@ -145,9 +132,9 @@ const ShoppingListResult = () => {
                       // style={{ width: "auto", height: "auto" }}
                     />
                   </button>
-                  <span>Bread</span>
+                  <span className="text-sm capitalize">Bread</span>
                 </li>
-                <li className="flex flex-col items-center justify-center">
+                <li className=" flex flex-col items-center justify-center">
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/BroccoliIcon.svg"
@@ -157,9 +144,9 @@ const ShoppingListResult = () => {
                       // style={{ width: "auto", height: "auto" }}
                     />
                   </button>
-                  <span>Broccoli</span>
+                  <span className="text-sm capitalize">Broccoli</span>
                 </li>
-                <li className="flex flex-col items-center justify-center">
+                <li className=" flex flex-col items-center justify-center">
                   <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
                     <Image
                       src="/ButterIcon.svg"
@@ -169,7 +156,127 @@ const ShoppingListResult = () => {
                       // style={{ width: "auto", height: "auto" }}
                     />
                   </button>
-                  <span>Butter</span>
+                  <span className="text-sm capitalize">Butter</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Cereal.png"
+                      alt="Cereal"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Cereal</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/CheeseIcon.svg"
+                      alt="Cheese"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Cheese</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Chicken.png"
+                      alt="Chicken"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Chicken</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Cucumber.png"
+                      alt="Cucumber"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Cucumber</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/EggIcon.svg"
+                      alt="Eggs"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Eggs</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Lettuce.png"
+                      alt="Lettuce"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Lettuce</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/MilkIcon.svg"
+                      alt="Milk"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Milk</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/ToiletPaper.png"
+                      alt="Toilet paper"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Toilet Paper</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/Tomato.png"
+                      alt="Tomato"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Tomato</span>
+                </li>
+                <li className=" flex flex-col items-center justify-center">
+                  <button className="flex justify-center items-center rounded-full shadow-md shadow-gray-400 p-2.5 w-6/12 h-14">
+                    <Image
+                      src="/IceCreamIcon.svg"
+                      alt="Yogurt"
+                      width={80}
+                      height={80}
+                      // style={{ width: "auto", height: "auto" }}
+                    />
+                  </button>
+                  <span className="text-sm capitalize">Yogurt</span>
                 </li>
               </ul>
             </div>
