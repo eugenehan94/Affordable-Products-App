@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { useState } from "react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -33,7 +35,15 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-center items-center gap-x-4">
-          <h1 className="text-gray-700">About Flipp</h1>
+          {/* https://nextjs.org/docs/messages/invalid-new-link-with-extra-anchor
+              legacyBehavior is added to prevent error and allows us to open new Next js
+              link in new tab - required functionality
+          */}
+          <Link href="/corporation" legacyBehavior>
+            <a target="_blank" className="text-gray-700">
+              About Flipp
+            </a>
+          </Link>
           <h1 className="text-gray-700">Flipp Mobile App</h1>
           <h1 className="text-gray-700">Blog</h1>
         </div>
