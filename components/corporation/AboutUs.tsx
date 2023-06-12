@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <section className="my-16 px-14 flex flex-col lg:flex-row items-stretch justify-stretch">
+    <section className="my-20 px-14 flex flex-col lg:flex-row items-stretch justify-stretch">
       <div className="basis-1/2">
         {/* https://stackoverflow.com/questions/73673403/lower-quality-images-in-next-js-image-vs-normal-img-tag 
     This explains the use of "unoptimized" in the Image to prevent blurry images*/}
