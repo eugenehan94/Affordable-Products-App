@@ -3,26 +3,27 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer>
-      <Image
-        src="/flippLogo.svg"
-        alt="Flipp"
-        width={80}
-        height={60}
-        style={{ width: "auto", height: "auto" }}
-      />
-      <p>
-        This essential app brings you the latest weekly ads, deals, and coupons
-        from more than 2000 of your favorite stores.
-      </p>
-      <Image
-        src="/AppStorePicture.png"
-        alt="Apple Store"
-        width={150}
-        height={150}
-        style={{ width: "auto", height: "auto" }}
-        className="cursor-pointer"
-      />
-
+      <div>
+        <Image
+          src="/flippLogo.svg"
+          alt="Flipp"
+          width={80}
+          height={60}
+          style={{ width: "auto", height: "auto" }}
+        />
+        <p>
+          This essential app brings you the latest weekly ads, deals, and
+          coupons from more than 2000 of your favorite stores.
+        </p>
+        <Image
+          src="/AppStorePicture.png"
+          alt="Apple Store"
+          width={150}
+          height={150}
+          style={{ width: "auto", height: "auto" }}
+          className="cursor-pointer"
+        />
+      </div>
       <Image
         src="/GooglePlayPicture.png"
         alt="Google Store"
