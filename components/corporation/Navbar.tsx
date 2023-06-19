@@ -1,18 +1,22 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
   return (
-    <div className="fixed top-0 left-0 h-24 z-50 bg-white flex justify-between lg:justify-normal w-full items-center px-10">
-      <div className="">
+    <nav className="fixed top-0 left-0 h-24 z-50 bg-white flex justify-between lg:justify-normal w-full items-center px-10">
+      <Link href="/corporation">
         <Image
           src="/flippLogo.svg"
           alt="Flipp"
           width={80}
           height={60}
           style={{ width: "80px", height: "auto" }}
+          
         />
-      </div>
+      </Link>
       <nav className="grow hidden lg:flex justify-end px-5">
         <ul className="flex text-lg gap-x-8">
           <li>
@@ -90,7 +94,7 @@ const Navbar = () => {
           </ul>
         </nav>
       )}
-    </div>
+    </nav>
   );
 };
 
