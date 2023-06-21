@@ -1,20 +1,30 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
-    <section className="bg-sky-700 mt-24 w-full p-5">
-      <div className="mt-10">
-        <h2 className="text-white text-lg font-bold uppercase mb-5">
+    <section className="bg-sky-700 mt-24 w-full p-5 md:flex">
+      <div className="mt-10 mb-10 md:basis-1/2">
+        <h2 className="text-white text-lg md:text-xl lg:text-2xl font-bold uppercase mb-5">
           About Us
         </h2>
-        <p className="text-white">
+        <p className="text-white text-2xl md:text-3xl lg:text-5xl font-extrabold md:font-bold leading-8 mb-5">
           Flipp connects tens of millions of shoppers to retailers every week
         </p>
-        <p>
+        <p className="text-white leading-7 md:text-lg font-medium">
           Founded in 2007, Flipp is a technology platform that is reinventing
           the way people plan their weekly shopping trip.
         </p>
       </div>
-      <div>
-
+      <div className="md:basis-1/2">
+        {/* @TODO: Add the actual image - using placeholder for now */}
+        <Image
+          src="/CorporationAboutUsImage.jpg"
+          alt="About us"
+          width={80}
+          height={80}
+          unoptimized
+          style={{ width: "100%", height: "100%" }}
+        />
       </div>
     </section>
   );
