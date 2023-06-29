@@ -1,11 +1,20 @@
+import Image from "next/image";
+
 const OurCulture = () => {
   return (
-    <section className="p-5 lg:flex lg:flex-row">
+    <section className="p-5 lg:flex lg:flex-row lg:gap-x-5">
       <div className="basis-1/2">
-        <p className="text-center">IMAGE HERE</p>
+        <Image
+          src="/CorporationAboutUsOurCultureImage.jpg"
+          alt="Our culture"
+          width={80}
+          height={80}
+          style={{ width: "100%", height: "100%" }}
+          unoptimized
+        />
       </div>
       <div className="basis-1/2">
-        <h2 className="text-lg md:text-xl lg:text-2xl uppercase text-sky-800 font-bold mb-5">
+        <h2 className="text-lg md:text-xl lg:text-2xl uppercase text-sky-800 font-bold my-5">
           Our Culture
         </h2>
         <p className="text-base md:text-lg font-semibold leading-7 mb-5">

@@ -16,14 +16,14 @@ const Hero = () => {
         </p>
       </div>
       <div className="md:basis-1/2">
-        {/* @TODO: Add the actual image - using placeholder for now */}
         <Image
-          src="/CorporationAboutUsImage.jpg"
+          src="/CorporationAboutUsHeroImage.jpg"
           alt="About us"
           width={80}
           height={80}
           unoptimized
           style={{ width: "100%", height: "100%" }}
+          className="translate-y-12"
         />
       </div>
     </section>
