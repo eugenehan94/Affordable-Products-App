@@ -39,8 +39,8 @@ const OurCpgPartners = () => {
         </div>
         <div className="basis-1/2 md:basis-1/4 p-5 lg:p-12">
           <Image
-            src="/BestBuyLogo.png"
-            alt="Best Buy"
+            src="/KelloggsLogo.png"
+            alt="Kelloggs"
             width={80}
             height={80}
             style={{ width: "100%", height: "auto" }}
@@ -49,8 +49,8 @@ const OurCpgPartners = () => {
         </div>
         <div className="basis-1/2 md:basis-1/4 p-5 lg:p-12">
           <Image
-            src="/PetsmartLogo.png"
-            alt="Petsmart"
+            src="/JohnsonAndJohnsonLogo.png"
+            alt="Johnson And Johnson"
             width={80}
             height={80}
             style={{ width: "100%", height: "auto" }}
@@ -59,8 +59,8 @@ const OurCpgPartners = () => {
         </div>
         <div className="basis-1/2 md:basis-1/4 p-5 lg:p-12">
           <Image
-            src="/WalgreensLogo.png"
-            alt="Walgreens"
+            src="/DanoneLogo.png"
+            alt="Danone"
             width={80}
             height={80}
             style={{ width: "100%", height: "auto" }}
@@ -69,8 +69,8 @@ const OurCpgPartners = () => {
         </div>
         <div className="basis-1/2 md:basis-1/4 p-5 lg:p-12">
           <Image
-            src="/LoblawsLogo.png"
-            alt="Loblaws"
+            src="/CocaColaLogo.png"
+            alt="Coca Cola"
             width={80}
             height={80}
             style={{ width: "100%", height: "auto" }}
@@ -79,8 +79,8 @@ const OurCpgPartners = () => {
         </div>
         <div className="basis-1/2 md:basis-1/4 p-5 lg:p-12">
           <Image
-            src="/KrogerNoBorderLogo.png"
-            alt="Kroger"
+            src="/NestleLogo.png"
+            alt="Nestle"
             width={80}
             height={80}
             style={{ width: "100%", height: "auto" }}
