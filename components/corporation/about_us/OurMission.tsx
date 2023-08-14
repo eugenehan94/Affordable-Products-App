@@ -1,4 +1,5 @@
 import YoutubeVideo from "./YoutubeVideo";
+import Link from "next/link";
 
 const OurMission = () => {
   return (
@@ -28,7 +29,7 @@ const OurMission = () => {
                 With the recent acquisition of reebee, Flipp’s Shopper
                 Consideration Platform offers platform improvements and the
                 ability to reach even more households. For more information{" "}
-                <span className="text-sky-700">read here</span>.
+                <Link href="/corporation/news" className="text-sky-700">read here</Link>.
               </p>
             </div>
           </div>
@@ -51,7 +52,7 @@ const OurMission = () => {
           With the recent acquisition of reebee, Flipp’s Shopper Consideration
           Platform offers platform improvements and the ability to reach even
           more households. For more information{" "}
-          <span className="text-sky-700">read here</span>.
+          <Link href="/corporation/news" className="text-sky-700">read here</Link>.
         </p>
       </div>
     </section>

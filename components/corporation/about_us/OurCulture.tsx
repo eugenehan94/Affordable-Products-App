@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const OurCulture = () => {
   return (
@@ -7,10 +8,9 @@ const OurCulture = () => {
         <Image
           src="/CorporationAboutUsOurCultureImage.jpg"
           alt="Our culture"
-          width={80}
-          height={80}
-          style={{ width: "100%", height: "100%" }}
-          unoptimized
+          width={1000}
+          height={1000}
+          className="object-contain w-full h-full"
         />
       </div>
       <div className="basis-1/2">
@@ -32,7 +32,7 @@ const OurCulture = () => {
           years.
         </p>
         <button className="bg-sky-700 text-white font-medium text-base md:text-lg px-8 py-3 rounded-full">
-          Learn more about our culture
+          <Link href="/corporation/culture"> Learn more about our culture</Link>
         </button>
       </div>
     </section>

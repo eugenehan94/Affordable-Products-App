@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const OurPartners = () => {
   return (
@@ -19,17 +20,18 @@ const OurPartners = () => {
           better understand consumer shopping behavior.
         </p>
         <button className="bg-sky-700 text-white font-medium px-8 py-3 rounded-full mb-5 md:text-lg">
-          Learn more about our partners
+          <Link href="/corporation/partners">
+            Learn more about our partners
+          </Link>
         </button>
       </div>
       <div className="basis-1/2">
         <Image
           src="/CorporationAboutUsOurPartners.png"
           alt="Our partners"
-          width={80}
-          height={80}
-          style={{ width: "100%", height: "100%" }}
-          unoptimized
+          className="w-full"
+          width={1000}
+          height={1000}
         />
       </div>
     </section>
