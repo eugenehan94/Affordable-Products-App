@@ -1,3 +1,4 @@
+import Link from "next/link";
 const BottomBanner = () => {
   return (
     <section className="w-full bg-sky-700 flex flex-col items-center justify-center p-2.5 my-24">
@@ -6,7 +7,7 @@ const BottomBanner = () => {
         today.
       </h2>
       <button className="bg-white text-sky-900 text-base lg:text-lg px-8 py-3 rounded-full font-medium mb-5">
-        Request a Demo
+        <Link href="/corporation/contact_us">Request a Demo</Link>
       </button>
     </section>
   );

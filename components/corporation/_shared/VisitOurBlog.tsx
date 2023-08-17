@@ -1,5 +1,5 @@
-// @TODO: Shared with "news" page - could be refactored
 import Image from "next/image";
+
 const VisitOurBlog = () => {
   return (
     <section className="p-5 my-24 lg:flex">
@@ -7,10 +7,9 @@ const VisitOurBlog = () => {
         <Image
           src="/CorporationPartnersVisitOurBlogImage.jpg"
           alt="Visit our blog"
-          width={80}
-          height={80}
-          style={{ width: "auto", height: "auto" }}
-          unoptimized
+          width={1000}
+          height={1000}
+          className="w-full"
         />
       </div>
       <div className="p-14 lg:basis-1/2">
@@ -18,7 +17,9 @@ const VisitOurBlog = () => {
           Find all the latest shopper and merchant insights from Flipp
         </h2>
         <button className="bg-sky-700 text-white md:text-lg font-medium px-8 py-3 rounded-full">
-          Visit our Blog
+          <a href="https://blog.flipp.com/category/insights/" target="_blank">
+            Visit our Blog
+          </a>
         </button>
       </div>
     </section>

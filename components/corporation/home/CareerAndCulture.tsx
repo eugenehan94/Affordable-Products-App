@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CareerAndCulture = () => {
   return (
@@ -7,10 +8,9 @@ const CareerAndCulture = () => {
         <Image
           src="/CorporationCareerAndCultureImage.jpg"
           alt="Our platform"
-          width={80}
-          height={80}
-          style={{ width: "100%", height: "100%" }}
-          unoptimized
+          className="object-contain w-full h-full"
+          width={1000}
+          height={1000}
         />
       </div>
       <div className="mt-8 px-8 lg:px-10 basis-1/2">
@@ -24,7 +24,7 @@ const CareerAndCulture = () => {
           one-of-a-kind culture, no matter how big our team grows!
         </p>
         <button className="bg-sky-700 text-white font-medium px-8 py-3 rounded-full">
-          Learn more about our culture
+          <Link href="/corporation/culture">Learn more about our culture</Link>
         </button>
       </div>
     </section>

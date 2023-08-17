@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const OurPlatform = () => {
   return (
@@ -7,14 +8,15 @@ const OurPlatform = () => {
         <Image
           src="/CorporationOurPlatformImage.jpg"
           alt="Our platform"
-          width={80}
-          height={80}
-          style={{ width: "100%", height: "100%" }}
-          unoptimized
+          className="object-contain w-full h-full"
+          width={1000}
+          height={1000}
         />
       </div>
       <div className="mt-8 px-8 lg:px-10 basis-1/2">
-        <h1 className="uppercase text-sky-800 text-lg lg:text-2xl font-bold mb-5">Our Platform</h1>
+        <h1 className="uppercase text-sky-800 text-lg lg:text-2xl font-bold mb-5">
+          Our Platform
+        </h1>
         <p className="mb-5 font-medium lg:text-lg leading-8 lg:leading-10">
           The Flipp Shopper Consideration Platform is an end-to-end platform
           that allows retailers and brands to win the consideration phase of the
@@ -28,7 +30,9 @@ const OurPlatform = () => {
           North American household, every week.
         </p>
         <button className="bg-sky-700 text-white font-medium px-8 py-3 rounded-full">
-          Learn more about our platform
+          <Link href="/corporation/platforms">
+            Learn more about our platform
+          </Link>
         </button>
       </div>
     </section>

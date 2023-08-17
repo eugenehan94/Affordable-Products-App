@@ -1,14 +1,13 @@
 import { useState, useEffect, useContext } from "react";
-
-import SearchNavbar from "@/components/SearchNavbar";
-import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
-import SearchSidebarMobile from "@/components/SearchSidebarMobile";
-import DownloadAppButton from "@/components/DownloadAppButton";
-import CouponsNotice from "@/components/CouponsNotice";
-import CouponsResult from "@/components/CouponsResult";
+import Loader from "@/components/_shared/Loader";
+import SearchNavbar from "@/components/_shared/SearchNavbar";
+import SearchSidebarDesktop from "@/components/_shared/SearchSidebarDesktop";
+import SearchSidebarMobile from "@/components/_shared/SearchSidebarMobile";
+import DownloadAppButton from "@/components/_shared/DownloadAppButton";
+import CouponsNotice from "@/components/coupons/CouponsNotice";
+import CouponsResult from "@/components/coupons/CouponsResult";
 
 import { UserContext } from "@/context/context";
-import Loader from "@/components/Loader";
 
 const Coupons = () => {
   const [couponsData, setCouponsData] = useState([]);

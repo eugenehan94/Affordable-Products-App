@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import SearchNavbar from "@/components/SearchNavbar";
-import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
-import SearchSidebarMobile from "@/components/SearchSidebarMobile";
-import DownloadAppButton from "@/components/DownloadAppButton";
-import ShoppingListResult from "@/components/ShoppingListResult";
+import SearchNavbar from "@/components/_shared/SearchNavbar";
+import SearchSidebarDesktop from "@/components/_shared/SearchSidebarDesktop";
+import SearchSidebarMobile from "@/components/_shared/SearchSidebarMobile";
+import DownloadAppButton from "@/components/_shared/DownloadAppButton";
+import ShoppingListResult from "@/components/shopping_list/ShoppingListResult";
 
 import { UserContext } from "@/context/context";
 

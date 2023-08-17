@@ -1,18 +1,18 @@
+// https://stackoverflow.com/questions/73673403/lower-quality-images-in-next-js-image-vs-normal-img-tag 
+// This explains the use of "unoptimized" in the Image to prevent blurry images
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
     <section className="my-20 px-14 flex flex-col lg:flex-row items-stretch justify-stretch">
       <div className="basis-1/2">
-        {/* https://stackoverflow.com/questions/73673403/lower-quality-images-in-next-js-image-vs-normal-img-tag 
-    This explains the use of "unoptimized" in the Image to prevent blurry images*/}
         <Image
           src="/CorporationAboutUsImage.jpg"
           alt="About Us"
-          width={80}
-          height={80}
-          style={{ width: "100%", height: "100%" }}
-          unoptimized
+          className="object-contain w-full h-full"
+          width={1000}
+          height={1000}
         />
       </div>
       <div className="mt-8 px-8 lg:px-10 basis-1/2">
@@ -31,7 +31,7 @@ const AboutUs = () => {
           experiences to decide what to buy and where to buy.
         </p>
         <button className="bg-sky-700 text-white font-medium px-8 py-3 rounded-full">
-          Learn more about us
+          <Link href="/corporation/about_us">Learn more about us</Link>
         </button>
       </div>
     </section>

@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect, useState, useContext } from "react";
-import Loader from "@/components/Loader";
-import SearchNavbar from "@/components/SearchNavbar";
-import SearchResults from "@/components/SearchResults";
-import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
-import SearchSidebarMobile from "@/components/SearchSidebarMobile";
-import DownloadAppButton from "@/components/DownloadAppButton";
+import Loader from "@/components/_shared/Loader";
+import SearchNavbar from "@/components/_shared/SearchNavbar";
+import SearchResults from "@/components/productInput/SearchResults";
+import SearchSidebarDesktop from "@/components/_shared/SearchSidebarDesktop";
+import SearchSidebarMobile from "@/components/_shared/SearchSidebarMobile";
+import DownloadAppButton from "@/components/_shared/DownloadAppButton";
 
 import { UserContext } from "@/context/context";
 

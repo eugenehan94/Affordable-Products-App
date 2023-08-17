@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import SearchNavbar from "@/components/SearchNavbar";
-import SearchSidebarDesktop from "@/components/SearchSidebarDesktop";
-import SearchSidebarMobile from "@/components/SearchSidebarMobile";
-import FlyerResults from "@/components/FlyerResults";
-import DownloadAppButton from "@/components/DownloadAppButton";
-import Loader from "@/components/Loader";
+import Loader from "@/components/_shared/Loader";
+import SearchNavbar from "@/components/_shared/SearchNavbar";
+import SearchSidebarDesktop from "@/components/_shared/SearchSidebarDesktop";
+import SearchSidebarMobile from "@/components/_shared/SearchSidebarMobile";
+import FlyerResults from "@/components/flyers/FlyerResults";
+import DownloadAppButton from "@/components/_shared/DownloadAppButton";
 
 import { UserContext } from "@/context/context";
 

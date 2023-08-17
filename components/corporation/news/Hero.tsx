@@ -10,11 +10,9 @@ const Hero = () => {
         <Image
           src="/CorporationPartnersHeroImage.jpg"
           alt="Hero"
-          width={80}
-          height={80}
-          unoptimized
-          style={{ width: "100%", height: "100%" }}
-          className="translate-y-12 md:translate-y-0"
+          width={1000}
+          height={1000}
+          className="object-contain w-full h-full translate-y-12 md:translate-y-0"
         />
       </div>
     </section>

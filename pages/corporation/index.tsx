@@ -1,11 +1,11 @@
-import Navbar from "@/components/corporation/Navbar";
-import Hero from "@/components/corporation/Hero";
-import AboutUs from "@/components/corporation/AboutUs";
-import OurPlatform from "@/components/corporation/OurPlatform";
-import OurPartners from "@/components/corporation/OurPartners";
-import CareerAndCulture from "@/components/corporation/CareerAndCulture";
-import BottomBanner from "@/components/corporation/BottomBanner";
-import Footer from "@/components/corporation/Footer";
+import Navbar from "@/components/corporation/_shared/Navbar";
+import Hero from "@/components/corporation/home/Hero";
+import AboutUs from "@/components/corporation/home/AboutUs";
+import OurPlatform from "@/components/corporation/home/OurPlatform";
+import OurPartners from "@/components/corporation/home/OurPartners";
+import CareerAndCulture from "@/components/corporation/home/CareerAndCulture";
+import BottomBanner from "@/components/corporation/_shared/BottomBanner";
+import Footer from "@/components/corporation/_shared/Footer";
 
 const Corporation = () => {
   return (

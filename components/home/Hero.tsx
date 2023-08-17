@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="px-4 my-5">
-      <div className="flex flex-col md:flex-row mt-12 justify-center md:gap-10">
-        <div className="text-2xl max-w-md text-center md:text-left">
-          <span className="text-4xl text-gray-700">
+    <section className="my-5">
+      <div className="flex flex-col md:flex-row mt-12 justify-center">
+        <div className="text-center md:text-left md:basis-1/2 md:px-5">
+          <span className="text-2xl md:text-4xl text-gray-700 leading-relaxed">
             Save time and money weekly with digital ads on Flipp.
           </span>
         </div>
-        <div>
-          <p className="text-center text-large mt-3.5 text-gray-700">
+        <div className="md:basis-1/2 md:px-10">
+          <p className="md:text-lg text-center text-large my-3.5 text-gray-700">
             <span className="font-bold">Type your postal code</span> below to
             see the latest deals near you.
           </p>
@@ -19,14 +19,12 @@ const Hero = () => {
             <input
               type="text"
               placeholder="M4J1A1"
-              className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded"
+              maxLength={7}
+              className="pl-2.5 pt-1.5 pr-1.5 pb-1.5 text-2xl border-gray-400 border-solid border-2 rounded font-bold uppercase"
             ></input>
-            {/* <button className="cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1">
-              Start Saving
-            </button> */}
             <Link
               href="/flyers"
-              className=" text-center cursor-pointer bg-blue-500 hover:bg-sky-400 text-white rounded p-1 mt-1"
+              className=" text-center cursor-pointer bg-blue-600 hover:bg-sky-400 text-white rounded p-1 mt-1"
             >
               Start Saving
             </Link>
@@ -38,13 +36,12 @@ const Hero = () => {
         <Image
           src="/HeroImage.png"
           alt="Flipp Hero"
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          width={1000}
+          height={1000}
+          className="w-full"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -15,7 +15,7 @@ const Search = () => {
   };
 
   return (
-    <div className="px-4 my-16 flex justify-center items-center" id="search">
+    <div className="my-16 flex justify-center items-center" id="search">
       <div className="w-10/12 md:w-3/5">
         <p className="text-3xl text-center my-10 text-gray-700">
           <span className="font-bold">Search</span> for items, brands, and
